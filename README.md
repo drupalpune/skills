@@ -22,6 +22,15 @@ skills/
     SKILL.md
 ```
 
+## Documentation
+
+- [Documentation index](docs/README.md)
+- [Repository setup and installation](docs/repository/getting-started.md)
+- [Contributing a new skill](docs/repository/create-new-skill.md)
+- [Event Audience Coverage — how-to guides](docs/event-audience-coverage/README.md)
+
+Each skill's guides live in `docs/<skill-name>/` alongside the corresponding `skills/<skill-name>/` directory.
+
 ## Installation
 
 To create an uploadable ZIP for a specific skill:

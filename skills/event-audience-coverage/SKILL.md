@@ -14,8 +14,8 @@ Accept: (a) one page URL, (b) a set of page URLs, (c) an XML sitemap URL, includ
 ## Workflow
 1. **Scope and discover.** Determine event identity, primary purpose, supplied URL(s), and page inventory. For sitemap input, retrieve sitemap or sitemap index and enumerate accessible, relevant pages; if access or crawl limits prevent full enumeration, explicitly state the inspected subset and coverage denominator. Do not claim a full crawl when only samples were retrieved.
 2. **Read and classify.** Inspect real page content, title, headings, primary actions, and linked pathways. Classify each page using `references/page-types.md`. Distinguish fetched content from inferred metadata. Note missing, gated, inaccessible, JS-only, or otherwise unverified pages.
-3. **Identify personas.** Use `references/personas.md`. Treat personas as intersecting dimensions: roles, Drupal familiarity, attendance motivation, sector. Group overlapping personas to avoid artificial score inflation. Identify primary, secondary, incidental, and non-applicable audiences by page purpose.
-4. **Score with evidence.** Apply `references/scoring-rubric.md` consistently. A score requires a supporting excerpt, heading, or URL section. Use `?` if unverified; `N/A` only when a persona reasonably lies outside the intended page scope. Never equate keyword mentions with strong coverage.
+3. **Identify personas.** First classify the event using `references/event-types.md` and complete `templates/event-profile.md` (explicitly mark inferred/unknown fields). Select expected audiences using `references/audience-selection.md`, then use `references/personas.md`. Treat personas as intersecting dimensions: roles, Drupal familiarity, attendance motivation, sector. Group overlapping personas to avoid artificial score inflation. Identify primary, secondary, incidental, and non-applicable audiences by page purpose.
+4. **Score with evidence.** Use event-level expectation and page-level purpose to determine applicability before scoring. Keep audit completeness, evidence confidence, coverage, and journey completeness separate.  Apply `references/scoring-rubric.md` consistently. A score requires a supporting excerpt, heading, or URL section. Use `?` if unverified; `N/A` only when a persona reasonably lies outside the intended page scope. Never equate keyword mentions with strong coverage.
 5. **Assess visitor journey.** Is the value proposition clear to that persona? Is there a proof point, useful next step, credible invitation or conversion route? Apply inclusive editorial rules in `references/content-guidelines.md`.
 6. **Output.** For one page, use `templates/page-audit.md`. For multiple pages or sitemap, use `templates/site-audit.md` plus a filled matrix matching `templates/coverage-matrix.csv`. Explain constraints and what was actually inspected. Cite page URLs and evidence snippets.
 7. **Recommend changes.** Give targeted replacement/addition copy and placement, owner-agnostic priorities (P0 critical, P1 high, P2 useful), expected audience benefit, and effort (S/M/L). Preserve page intent; do not flatten technical content.
@@ -32,14 +32,20 @@ Accept: (a) one page URL, (b) a set of page URLs, (c) an XML sitemap URL, includ
 - For a content draft: assess target fit and suggest improvements before publishing; avoid treating absent site-wide audiences as defects in a focused post.
 
 ## Reference materials
+- `references/event-types.md`
+- `references/audience-selection.md`
 - `references/personas.md`
 - `references/scoring-rubric.md`
 - `references/page-types.md`
 - `references/content-guidelines.md`
 - `references/audit-output.md`
+- `templates/event-profile.md`
 - `templates/page-audit.md`
 - `templates/site-audit.md`
 - `templates/coverage-matrix.csv`
+
+## Evaluation examples
+Use `evals/cases.json` as an offline, deterministic test inventory, not as proof of model accuracy. Compare model-produced audits against fixture expectations during periodic human review.
 
 ## Example invocations
 - "Audit https://drupalasia.org/events/india-2027 for attendee persona coverage."

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "purpose": "Offline scenario inventory and human-reviewed expected behaviour; not a substitute for running the skill with a model.",
+  "cases": [
+    {"id":"broad-conference","event_type":"major conference","fixture":"fixtures/conference.md","expected_primary":["developers","business buyers"],"must_not":["claim attendance metrics"]},
+    {"id":"local-meetup","event_type":"meetup","fixture":"fixtures/meetup.md","expected_not_applicable":["investors"],"must_not":["penalize missing investors"]},
+    {"id":"contribution-onboarding","event_type":"contribution day","fixture":"fixtures/contribution-day.md","expected_primary":["new contributors"],"must_check":["mentoring","prerequisites"]},
+    {"id":"technical-session","event_type":"specialist session","fixture":"fixtures/technical-session.md","expected_not_applicable":["nontechnical buyers"],"must_not":["force broad audience claims"]},
+    {"id":"unavailable-page","event_type":"meetup","fixture":"fixtures/inaccessible.md","must_use":"?","must_not":["score unseen text as missing"]},
+    {"id":"keyword-only","event_type":"conference","fixture":"fixtures/keyword-only.md","must_not":["award score 4 from keywords alone"]},
+    {"id":"duplicate-url","event_type":"conference","fixture":"fixtures/duplicates.md","must_check":["deduplicate canonical URLs"]},
+    {"id":"baseline-comparison","event_type":"conference","fixture":"fixtures/baseline.md","must_check":["difference in audit scope"]}
+  ]
+}

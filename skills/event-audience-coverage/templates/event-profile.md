@@ -1,0 +1,13 @@
+# Event profile
+- Event name and URL:
+- Audit date:
+- Format: conference / camp / meetup / contribution day / workshop / summit / virtual / hybrid / other
+- Scale and geographic reach (explicit / inferred / unknown):
+- Primary purpose (evidence):
+- Main themes and program tracks (evidence):
+- Intended participants explicitly named:
+- Primary personas and rationale:
+- Secondary personas and rationale:
+- Intentionally out-of-scope personas and rationale:
+- Pages provided / discovered / inspected / inaccessible:
+- Evidence limitations and assumptions:

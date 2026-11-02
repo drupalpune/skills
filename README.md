@@ -28,6 +28,8 @@ skills/
 - [Repository setup and installation](docs/repository/getting-started.md)
 - [Contributing a new skill](docs/repository/create-new-skill.md)
 - [Event Audience Coverage — how-to guides](docs/event-audience-coverage/README.md)
+- [Testing and evaluation](docs/repository/testing.md)
+- [Release process](docs/repository/releases.md)
 
 Each skill's guides live in `docs/<skill-name>/` alongside the corresponding `skills/<skill-name>/` directory.
 
@@ -46,7 +48,7 @@ Do **not** upload the entire repository ZIP as one skill; package the particular
 ## Validation
 
 ```bash
-python3 scripts/validate_skills.py
+python3 scripts/test_skills.py
 ```
 
 Validation runs for pull requests and pushes to the default branch via GitHub Actions.
